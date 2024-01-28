@@ -17,13 +17,17 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
 
 # prashanth added this code to remove the big red button at bottom right
 
+
 hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
+            [data-testid="stToolbar"] {visibility: hidden !important;}
+            footer {visibility: hidden !important;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+
 
 
 # end of prashanth code
