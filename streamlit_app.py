@@ -14,6 +14,23 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
         {"role": "assistant", "content": "Ask me a question about Aaron's research!"}
     ]
 
+
+# prashanth added this code to remove the big red button at bottom right
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+# end of prashanth code
+
+
+
+
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading and indexing the docs – hang tight! This should take 1-2 minutes."):
